@@ -190,25 +190,25 @@ $(document).ready(function () {
     }
   })
 
-  $('.mehanizm__item-second').hover(function(){
+  $('.mehanizm__item-second').hover(function () {
     $('.mehanizm__end-block--first').addClass('active')
     $('.mehanizm__end-block--second').addClass('active')
   })
 
-  $('.mehanizm__item-third').hover(function(){
+  $('.mehanizm__item-third').hover(function () {
     $('.mehanizm__end-block--first').addClass('active')
     $('.mehanizm__end-block--second').addClass('active')
     $('.mehanizm__end-block--third').addClass('active')
   })
 
-  $('.mehanizm__item-foure').hover(function(){
+  $('.mehanizm__item-foure').hover(function () {
     $('.mehanizm__end-block--first').addClass('active')
     $('.mehanizm__end-block--second').addClass('active')
     $('.mehanizm__end-block--third').addClass('active')
     $('.mehanizm__end-block--foure').addClass('active')
   })
 
-  $('.mehanizm__item-five').hover(function(){
+  $('.mehanizm__item-five').hover(function () {
     $('.mehanizm__end-block--first').addClass('active')
     $('.mehanizm__end-block--second').addClass('active')
     $('.mehanizm__end-block--third').addClass('active')
@@ -216,12 +216,24 @@ $(document).ready(function () {
     $('.mehanizm__end-block--five').addClass('active')
   })
 
-  $('.mehanizm__item-six').hover(function(){
+  $('.mehanizm__item-six').hover(function () {
     $('.mehanizm__end-block--first').addClass('active')
     $('.mehanizm__end-block--second').addClass('active')
     $('.mehanizm__end-block--third').addClass('active')
     $('.mehanizm__end-block--foure').addClass('active')
     $('.mehanizm__end-block--five').addClass('active')
     $('.mehanizm__end-block--six').addClass('active')
+  })
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+      $('.top_button').fadeIn(500)
+    } else {
+      $('.top_button').fadeOut(500)
+    }
+  })
+  $('.top_button').click(function (event) {
+    event.preventDefault()
+    $('html, body').animate({ scrollTop: 0 }, 500)
   })
 })
