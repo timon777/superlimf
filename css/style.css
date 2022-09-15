@@ -191,7 +191,7 @@ ul {
   right: 0;
   width: 100%;
   margin: 0 auto;
-  z-index: 150;
+  z-index: 200;
 }
 
 @media only screen and (max-width: 991px) {
@@ -389,13 +389,13 @@ ul {
   }
 }
 
-.header__burger a {
+.header__burger div {
   display: block;
   cursor: pointer;
   padding: 12px 0;
 }
 
-.header__burger a span {
+.header__burger div span {
   position: relative;
   display: block;
   width: 30px;
@@ -405,7 +405,7 @@ ul {
   transition: all 0.2s ease-in-out;
 }
 
-.header__burger a span:before, .header__burger a span:after {
+.header__burger div span:before, .header__burger div span:after {
   content: '';
   width: 30px;
   height: 5px;
@@ -416,23 +416,23 @@ ul {
   transition: all 0.2s ease-in-out;
 }
 
-.header__burger a span:before {
+.header__burger div span:before {
   top: -8px;
 }
 
-.header__burger a span:after {
+.header__burger div span:after {
   top: 8px;
 }
 
-.header__burger a.active span {
+.header__burger div.active span {
   background: transparent;
 }
 
-.header__burger a.active span:before {
+.header__burger div.active span:before {
   transform: rotate(45deg) translate(5px, 6px);
 }
 
-.header__burger a.active span:after {
+.header__burger div.active span:after {
   transform: rotate(-45deg) translate(5px, -6px);
 }
 

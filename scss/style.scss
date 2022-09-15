@@ -184,7 +184,7 @@ ul {
   right: 0;
   width: 100%;
   margin: 0 auto;
-  z-index: 150;
+  z-index: 200;
 
   @media only screen and (max-width: 991px) {
     position: fixed;
@@ -360,7 +360,7 @@ ul {
       display: block;
     }
 
-    a {
+    div {
       display: block;
       cursor: pointer;
       padding: 12px 0;

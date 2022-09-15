@@ -2,8 +2,15 @@ $(document).ready(function () {
   $('.header__burger').click(function () {
     $(this).children().toggleClass('active')
     $('.header__item').toggleClass('active')
-    return false
   })
+
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".header__burger, .header__item").length) {
+      $(".header__item").removeClass("active");
+      $('.header__burger div').removeClass('active')
+    }
+    e.stopPropagation();
+  });
 
   function onEntry(entry) {
     entry.forEach(change => {
