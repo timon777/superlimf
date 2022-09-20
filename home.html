@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="format-detection" content="telephone=no" />
     <title>Home</title>
-
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./libs/slick/slick.css" />
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -19,11 +19,11 @@
             <a href="index.html" class="header__logo"><img src="images/logo.svg" alt="" /></a>
             <div class="header__item">
               <ul class="header__nav">
-                <li><a href="#">О препарате</a></li>
-                <li><a href="#">Область применения</a></li>
-                <li><a href="#">Специалистам</a></li>
-                <li><a href="#">Инструкция</a></li>
-                <li><a href="#">Вопросы</a></li>
+                <li><a href="product.html">О препарате</a></li>
+                <li><a href="app.zip">Область применения</a></li>
+                <li><a href="#modal-special" data-fancybox="">Специалистам</a></li>
+                <li><a href="instruction.html">Инструкция</a></li>
+                <li><a href="questions.html">Вопросы</a></li>
               </ul>
               <a href="#" class="header__btn"><span>Купить</span></a>
             </div>
@@ -586,15 +586,15 @@
               <div class="footer__head">Информация</div>
               <div class="footer__lists">
                 <ul class="footer__list">
-                  <li><a href="#">О препарате</a></li>
-                  <li><a href="#">Инструкция</a></li>
-                  <li><a href="#">Вопросы</a></li>
-                  <li><a href="#">Специалистам</a></li>
+                  <li><a href="product.html">О препарате</a></li>
+                  <li><a href="instruction.html">Инструкция</a></li>
+                  <li><a href="questions.html">Вопросы</a></li>
+                  <li><a href="#modal-special" data-fancybox="">Специалистам</a></li>
                 </ul>
                 <ul class="footer__list">
-                  <li><a href="#">Где купить</a></li>
+                  <li><a href="buy.html">Где купить</a></li>
                   <li><a href="#">Фармаконадзор</a></li>
-                  <li><a href="#">О компании</a></li>
+                  <li><a href="product.html">О компании</a></li>
                   <li><a href="#">Политика конфиденциальности</a></li>
                 </ul>
               </div>
@@ -619,7 +619,23 @@
         </p>
       </div>
 
-      <a class="top_button" href="#" style="display: none;"><span><img src="images/arrow-up-solid-min.svg" alt=""></span></a>
+      <a class="top_button" href="#" style="display: none"
+        ><span><img src="images/arrow-up-solid-min.svg" alt="" /></span
+      ></a>
+    </div>
+
+    <div class="modal-special" id="modal-special" style="display: none;">
+      <div class="modal-special__inner">
+        <div class="modal-special__strong" data-fancybox-close="">
+          <img src="images/modal_strong.svg" alt="" />
+        </div>
+        <div class="modal-special__title">Специалистам</div>
+        <div class="modal-special__text">
+          Раздел содержит информацию, предназначенную для специалистов в области медицины и фармации. Просим
+          подтвердить, что Вы обладаете соответствующей квалификацией.
+        </div>
+        <a href="specialist.html" class="modal-special__btn"><span>Да я сПециалист</span></a>
+      </div>
     </div>
 
     <script src="./libs/jquery/jquery-3.6.0.min.js"></script>

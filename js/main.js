@@ -4,13 +4,13 @@ $(document).ready(function () {
     $('.header__item').toggleClass('active')
   })
 
-  $(document).on("click", function (e) {
-    if (!$(e.target).closest(".header__burger, .header__item").length) {
-      $(".header__item").removeClass("active");
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.header__burger, .header__item').length) {
+      $('.header__item').removeClass('active')
       $('.header__burger div').removeClass('active')
     }
-    e.stopPropagation();
-  });
+    e.stopPropagation()
+  })
 
   function onEntry(entry) {
     entry.forEach(change => {
@@ -242,5 +242,62 @@ $(document).ready(function () {
   $('.top_button').click(function (event) {
     event.preventDefault()
     $('html, body').animate({ scrollTop: 0 }, 500)
+  })
+
+  $('.special-video__items').slick({
+    rows: 2,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 639,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  })
+
+  $('.special-video__play').click(function () {
+    $('.special-video__item').removeClass('active')
+    $('.special-video__item video').trigger('pause')
+    $(this).parent().addClass('active')
+    $(this).prev().prev().trigger('play')
+  })
+
+  $(window).resize(function () {
+    if ($(window).width() > 991) {
+      $('.states__saidbar-items').show()
+    }
+  })
+
+  $('.states__saidbar-title').click(function () {
+    let windowSize = $(window).width()
+    if (windowSize <= 991) {
+      $(this).next().slideToggle(300)
+      $(this).toggleClass('active')
+    }
+  })
+
+  $(window).resize(function () {
+    let windowSize = $(window).width()
+    $('.states__saidbar-title').click(function () {
+      if (windowSize <= 991) {
+        $('.states__saidbar-subcategory').removeClass('active')
+        $(this).next().toggleClass('active')
+      }
+    })
   })
 })
