@@ -487,11 +487,28 @@ ul {
   top: 0;
   height: 120%;
   width: 1218px;
+  min-height: 1150px;
+}
+
+@media only screen and (max-width: 1660px) {
+  .showcase__image {
+    width: 1000px;
+    min-height: auto;
+    right: -300px;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .showcase__image {
+    width: 800px;
+    right: -200px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .showcase__image {
-    right: -500px;
+    right: -300px;
+    width: 800px;
   }
 }
 
@@ -2196,10 +2213,19 @@ ul {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .single-info picture {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .single-info img {
   float: left;
-  margin-right: 82px;
-  margin-bottom: -50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 1240px) {
